@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -10,17 +12,17 @@
    <children>
       <AnchorPane layoutX="522.0" layoutY="92.0" prefHeight="394.0" prefWidth="200.0" style="-fx-background-color: #CFCBDC;">
          <children>
-            <Button fx:id="btnSelectQuery" layoutX="7.0" layoutY="51.0" mnemonicParsing="false" onAction="#SelectQuery" prefHeight="47.0" prefWidth="187.0" style="-fx-background-color: #1fc28e;" text="Запрос на выборку" textFill="WHITE">
+            <Button fx:id="btnSelectQuery" layoutX="7.0" layoutY="51.0" mnemonicParsing="false" onAction="#executeSelectQuery" prefHeight="47.0" prefWidth="187.0" style="-fx-background-color: #1fc28e;" text="Запрос на выборку" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnStoredProcedure" layoutX="7.0" layoutY="167.0" mnemonicParsing="false" onAction="#StoredProcedure" prefHeight="47.0" prefWidth="187.0" style="-fx-background-color: #1fc28e;" text="Хранимая процедуры" textFill="WHITE">
+            <Button fx:id="btnStoredProcedure" layoutX="7.0" layoutY="167.0" mnemonicParsing="false" onAction="#executeStoredProcedure" prefHeight="47.0" prefWidth="187.0" style="-fx-background-color: #1fc28e;" text="Хранимая процедура" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnTrigger" layoutX="7.0" layoutY="282.0" mnemonicParsing="false" onAction="#Trigger" prefHeight="47.0" prefWidth="187.0" style="-fx-background-color: #1fc28e;" text="Триггер" textFill="WHITE">
+            <Button fx:id="btnTrigger" layoutX="7.0" layoutY="282.0" mnemonicParsing="false" onAction="#executeTrigger" prefHeight="47.0" prefWidth="187.0" style="-fx-background-color: #1fc28e;" text="Триггер" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -34,12 +36,12 @@
       </Text>
       <AnchorPane layoutX="24.0" layoutY="92.0" prefHeight="394.0" prefWidth="473.0" style="-fx-background-color: #CFCBDC;">
          <children>
-            <TextField fx:id="textFieldSelectQuery" layoutX="14.0" layoutY="33.0" prefHeight="84.0" prefWidth="428.0" text="Введите запрос на выборку" />
-            <TextField fx:id="textFieldstoredProcedure" layoutX="14.0" layoutY="150.0" prefHeight="84.0" prefWidth="428.0" text="Введите хранимую процедуру" />
-            <TextField fx:id="textFieldtrigger" layoutX="14.0" layoutY="264.0" prefHeight="84.0" prefWidth="428.0" text="Введите триггер" />
-            <Text fx:id="textQuery" fill="#f40202f2" layoutX="14.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="124.13671875" />
-            <Text fx:id="textProcedure" fill="#f40202" layoutX="14.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="124.13671875" />
-            <Text fx:id="textTrigger" fill="#f40202" layoutX="14.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="124.13671875" />
+            <TextField fx:id="textFieldStoredProcedure" layoutX="14.0" layoutY="150.0" prefHeight="84.0" prefWidth="428.0" promptText="Введите хранимую процедуру" />
+            <TextField fx:id="textFieldTrigger" layoutX="14.0" layoutY="264.0" prefHeight="84.0" prefWidth="428.0" promptText="Введите триггер" />
+            <Label fx:id="lblQuery" layoutX="14.0" layoutY="117.0" text="Label" visible="false" />
+            <Label fx:id="lblProcedure" layoutX="14.0" layoutY="234.0" text="Label" visible="false" />
+            <Label fx:id="lblTrigger" layoutX="14.0" layoutY="348.0" text="Label" visible="false" />
+            <ComboBox fx:id="comboBoxSelectQuery" layoutX="14.0" layoutY="61.0" prefHeight="31.0" prefWidth="428.0" />
          </children>
       </AnchorPane>
    </children>
